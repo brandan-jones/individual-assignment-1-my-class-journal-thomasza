@@ -4,12 +4,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class MyClassJournalController {
     /**
-     * Handle the / endpoint
-     * @return
+     * @return Handle the / endpoint
      */
     @RequestMapping("/")
     public String index() {
-        return "start";
+        return "index";
     }
 
 
