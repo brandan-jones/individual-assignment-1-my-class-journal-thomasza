@@ -1,0 +1,37 @@
+<!--
+
+this is the journal entry page, where you can type out your journal entry.
+eventually will POST to database, so we can GET from home page.
+
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>thomasza - my class journal</title>
+</head>
+<body>
+<div layout:fragment="content" class="card">
+    <div class="card-header">
+        <div class="row align-items-center">
+        <div class="col">
+        <input class="form-control" type="text" placeholder="Journal Entry" aria-label="journal entry title input">
+        </div>
+        <div class="col text-end text-nowrap">
+        <th:block th:text="${#execInfo.now.time}"></th:block>
+        </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="form-outline">
+            <textarea class="form-control" id="textArea" placeholder="Type your journal entry here" rows="8" aria-label="journal entry text area"></textarea>
+            <br/>
+        </div>
+        <form method="POST" th:action="@{/postEntry(date=${#execInfo.now.time})}">
+            <button type="submit" name="submit" value="value" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
