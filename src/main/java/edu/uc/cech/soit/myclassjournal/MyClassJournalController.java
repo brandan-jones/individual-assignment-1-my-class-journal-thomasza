@@ -1,7 +1,8 @@
 package edu.uc.cech.soit.myclassjournal;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
+
 @Controller
 public class MyClassJournalController {
     /**
@@ -13,5 +14,4 @@ public class MyClassJournalController {
     }
     @GetMapping("/entry")
     public String entryPage(){ return "entry"; }
-
 }

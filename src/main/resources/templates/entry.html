@@ -8,15 +8,23 @@
 <body>
 <div layout:fragment="content" class="card">
     <div class="card-header">
-        Journal Entry
+        <div class="row align-items-center">
+        <div class="col">
+        <input class="form-control" type="text" placeholder="Journal Entry" aria-label="journal entry title input">
+        </div>
+        <div class="col text-end text-nowrap">
+        <th:block th:text="${#execInfo.now.time}"></th:block>
+        </div>
+        </div>
     </div>
     <div class="card-body">
         <div class="form-outline">
-            <label class="form-label" for="textArea">thomasza</label>
-            <textarea class="form-control" id="textArea" rows="8"></textarea>
+            <textarea class="form-control" id="textArea" rows="8" aria-label="journal entry text area"></textarea>
             <br/>
         </div>
-        <a th:href="@{/}" class="btn btn-primary">Submit</a>
+        <form method="POST" th:action="@{/postEntry(date=${#execInfo.now.time})}">
+            <button type="submit" name="submit" value="value" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 </div>
 </body>

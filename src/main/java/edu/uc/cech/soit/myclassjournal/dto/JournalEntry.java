@@ -8,6 +8,7 @@ import lombok.Data;
  * using Lombok @Data annotation to generate getters & setters
  */
 public @Data class JournalEntry {
-    private String Notes;
+    private String Title;
     private String Date;
+    private String Notes;
 }
