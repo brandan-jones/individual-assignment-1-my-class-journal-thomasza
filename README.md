@@ -13,7 +13,8 @@ Currently utilizing:
 Wanted to actually implement everything so you could actually post journals successfully to the H2 database but couldn't figure out how to do it without breaking the current unit tests. Will maybe try later after assignment is graded.
 
 ## Screenshots
-
+![alt text](screenshots/index.png)
+![alt text](screenshots/entrypage.png)
 
 ## Gradesheet
 
