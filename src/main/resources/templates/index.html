@@ -1,3 +1,8 @@
+<!--
+
+this is the home page, where all the journal entries are displayed by date.
+
+-->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
@@ -8,7 +13,14 @@
 <body>
 <div layout:fragment="content" class="card">
     <div class="card-header">
-        Journal
+        <div class="row align-items-center">
+            <div class="col">
+                Journal
+            </div>
+            <div class="col text-end text-nowrap">
+                <th:block th:text="${#execInfo.now.time}"></th:block>
+            </div>
+        </div>
     </div>
     <div class="card-body">
         <blockquote class="blockquote mb-0">

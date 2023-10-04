@@ -1,3 +1,9 @@
+<!--
+
+this is the journal entry page, where you can type out your journal entry.
+eventually will POST to database, so we can GET from home page.
+
+-->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
@@ -19,7 +25,7 @@
     </div>
     <div class="card-body">
         <div class="form-outline">
-            <textarea class="form-control" id="textArea" rows="8" aria-label="journal entry text area"></textarea>
+            <textarea class="form-control" id="textArea" placeholder="Type your journal entry here" rows="8" aria-label="journal entry text area"></textarea>
             <br/>
         </div>
         <form method="POST" th:action="@{/postEntry(date=${#execInfo.now.time})}">

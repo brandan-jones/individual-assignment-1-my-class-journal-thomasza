@@ -1,11 +1,11 @@
 package edu.uc.cech.soit.myclassjournal.service;
 
 import edu.uc.cech.soit.myclassjournal.dto.JournalEntry;
-
 import java.util.List;
 
 /**
  * Journal Service handles business logic for Journal DTOs.
+ *
  */
 public interface IJournalService {
 
