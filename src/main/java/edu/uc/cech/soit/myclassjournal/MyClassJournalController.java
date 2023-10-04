@@ -1,15 +1,17 @@
 package edu.uc.cech.soit.myclassjournal;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+@Controller
 public class MyClassJournalController {
     /**
-     * @return Handle the / endpoint
+     * @return Handle the endpoints for thymeleaf dialect
      */
-    @RequestMapping("/")
+    @GetMapping("/")
     public String index() {
         return "index";
     }
-
+    @GetMapping("/entry")
+    public String entryPage(){ return "entry"; }
 
 }

@@ -13,16 +13,13 @@ public class JournalService implements IJournalService {
     @Autowired
     private IJournal journal;
     public JournalService(){}
-
     public JournalService(IJournal journal){
         this.journal = journal;
     }
-
     @Override
     public void save(JournalEntry journalEntry){
         journal.save(journalEntry);
     }
-
     @Override
     public List<JournalEntry> fetchAll() {
         return journal.fetchAll();
