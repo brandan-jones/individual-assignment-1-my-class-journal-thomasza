@@ -14,7 +14,7 @@ Wanted to actually implement everything so you could actually post journals succ
 
 ## Screenshots
 ![alt text](screenshots/index.png)
-![alt text](screenshots/entrypage.png)
+![alt text](screenshots/entry.png)
 
 ## Gradesheet
 
